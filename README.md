@@ -26,6 +26,14 @@ The process of transitioning the project from JavaScript to TypeScript involved 
 
 ### Create a List Component
 
+Created a `<List />` component that serves as the foundational component for all list-based displays within our application. This component accepts three props: `data`, `status`, and `render`.
+
+-   `data`: This prop represents the array of data that the list will render.
+-   `status`: This prop indicates the current status of the data fetching operation. It can be 'pending', 'error', or 'success'.
+-   `render`: This is a function prop (often referred to as a "render prop") that allows users to define the appearance of individual list items.
+
+By designing the `List` component in this way, we've ensured that it remains agnostic to the specific technology stack used for data fetching. The responsibility for data retrieval is delegated to a parent component, promoting separation of concerns. The `render` prop provides flexibility, allowing users to customize the rendering of list items as needed.
+
 ### Create a Form Generator Component
 
 ### Create a Page Generator Component
