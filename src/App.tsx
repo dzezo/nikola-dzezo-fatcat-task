@@ -1,6 +1,5 @@
-import './styles.css';
-
-import { Landing } from './components/landing/Landing.jsx';
+import { Landing } from '@homework-task/components/landing/Landing';
+import '@homework-task/styles.css';
 
 function App() {
     return (
