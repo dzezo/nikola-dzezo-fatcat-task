@@ -34,4 +34,8 @@ By designing the `List` component in this way, we've ensured that it remains agn
 
 ### Create a Page Generator Component
 
+-   The Page Generator consists of two primary logical units: Layout and Component. These units are implemented in the `PageComponent.tsx` and `PageLayout.tsx` files respectively. While their implementations are similar, the key distinction lies in the fact that the Layout component can contain `components` which are rendered as its children.
+-   To ensure scalability, each component is associated with a mapping record. This record uses the component name as a key and the component itself as a value. Adding support for new layouts or components is straightforward - simply add a new entry to this record. This record is also used to generate configuration types, eliminating the need to manually add types each time a new component is introduced.
+-   It's important to note that the `children` prop from layout components is omitted. This is because components are rendered as children of the Layout component, rather than being passed as props.
+
 ### Additional Requirements
