@@ -1,8 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { Landing } from '@homework-task/components/landing/Landing';
-import { UserList } from '@homework-task/features/userList/UserList';
 import '@homework-task/styles.css';
+import { PostForm } from '@homework-task/features/postForm/PostForm';
 
 const queryClient = new QueryClient({});
 
@@ -11,7 +11,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <main>
                 <Landing />
-                <UserList />
+                <PostForm />
             </main>
         </QueryClientProvider>
     );

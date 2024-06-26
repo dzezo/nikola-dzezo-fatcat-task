@@ -1,17 +1,10 @@
-import { PropsWithChildren } from 'react';
+import { ComponentProps, PropsWithChildren } from 'react';
 
 import clsx from 'clsx';
 
-type Props = {
-    onClick: () => void;
-    className?: string;
-};
+type Props = PropsWithChildren<ComponentProps<'button'>>;
 
-export const Button = ({
-    children,
-    onClick,
-    className,
-}: PropsWithChildren<Props>) => {
+export const Button = ({ children, className, ...rest }: Props) => {
     return (
         <button
             className={clsx(
@@ -22,7 +15,7 @@ export const Button = ({
                 'text-white',
                 className
             )}
-            onClick={onClick}
+            {...rest}
         >
             {children}
         </button>
