@@ -46,3 +46,5 @@ By designing the `List` component in this way, we've ensured that it remains agn
 -   It's important to note that the `children` prop from layout components is omitted. This is because components are rendered as children of the Layout component, rather than being passed as props.
 
 ### Additional Requirements
+
+-   Integrated `husky` and `lint-staged` to enforce type checking and linting rules prior to each commit.
