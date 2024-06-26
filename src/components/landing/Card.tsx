@@ -1,12 +1,13 @@
+import { PropsWithChildren } from 'react';
+
 import clsx from 'clsx';
 
-type Props = {
+type Props = PropsWithChildren<{
     title: string;
     text: string;
-    link: string;
-};
+}>;
 
-export const Card = ({ title, text, link }: Props) => (
+export const Card = ({ title, text, children }: Props) => (
     <div
         className={clsx(
             'flex',
@@ -32,18 +33,6 @@ export const Card = ({ title, text, link }: Props) => (
         <p className={clsx('text-gray80', 'text-base', 'leading-relaxed')}>
             {text}
         </p>
-        <a
-            href={link}
-            className={clsx(
-                'mt-auto',
-                'flex',
-                'items-center',
-                'text-primary',
-                'gap-2.5'
-            )}
-        >
-            Read more
-            <img src="/media/landing/arrow-purple.svg" alt="" />
-        </a>
+        {children}
     </div>
 );

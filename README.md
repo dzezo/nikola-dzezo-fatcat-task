@@ -1,3 +1,10 @@
+## How to run
+
+1. Install dependencies `npm install`
+2. Run `npm run dev`
+
+Landing page has been changed a bit, each task description card now routes to solution. Click **Go to solution** to see how it looks.
+
 ## Complete the following tasks
 
 ### Transfer the project to TypeScript

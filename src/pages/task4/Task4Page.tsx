@@ -3,9 +3,9 @@ import {
     PageGenerator,
 } from '@homework-task/features/pageGenerator/PageGenerator';
 
-export const ExamplePage = () => {
+export default function Task4Page() {
     return <PageGenerator pageConfig={pageConfig} />;
-};
+}
 
 const pageConfig: PageConfig = [
     {
